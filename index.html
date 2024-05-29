@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- Контейнер для самих часов -->
+        <div class="clock_wrapper">
+            <!-- Переключатель вида часов -->
+            <button id="change_clock" class="digital" type="button">Digital Clock</button>
+
+            <!-- Аналоговые часы -->
+            <div class="analog_clock">
+                <div class="clock_arrow hour_arrow"></div>
+                <div class="clock_arrow minute_arrow"></div>
+                <div class="clock_arrow second_arrow"></div>
+                <div class="clock_center_dot"></div>
+                <div class="date_info week_day"></div>
+                <div class="date_info month_and_day"></div>
+
+                <div class="gears_wrap">
+                    <div class="gear1"></div>
+                    <div class="gear2"></div>
+                </div>
+            </div>
+
+            <!-- Цифровые часы -->
+            <div class="digital_clock hide_digital_clock">
+                <div class="week_days_list"></div>
+                <div class="digital_time_block">
+                    <div class="time_block_hour"></div>
+                    <div class="time_block_minute"></div>
+                    <div class="time_block_seconds"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Тут будут будильник, таймер, секундомер -->
+        <div class="planning_system">
+
+            <div class="alarm_wrap">
+                <audio class="alarm_audio" src="sounds/alarm.mp3"></audio>
+                <div class="alarm_title">
+                    Alarm
+                </div>
+                <div class="alarm_time">
+                    <div class="time_block alarm_hour_block">
+                        <select id="alarm_hour"></select>
+                    </div>
+                    <div class="time_block alarm_minute_block">
+                         <select id="alarm_minute"></select>
+                    </div>
+                    <div class="time_block alarm_seconds_block">
+                         <select id="alarm_seconds"></select>
+                    </div>
+                </div>
+                <div class="alarm_buttons">
+                    <button class="alarm_btn alarm_on">ON</button>
+                    <button class="alarm_btn alarm_off">OFF</button>
+                </div>
+            </div>
+
+            <div class="planning_system_bottom">
+                <div class="timer_wrap">
+                    <audio class="timer_audio" src="sounds/timer.mp3"></audio>
+                   <div class="timer_info">
+                        <div class="timer_item timer_minute">
+                            <select id="tm_min"></select>
+                            <span class="timer_mm">00</span>
+                        </div>
+                        <div class="timer_item timer_dots">:</div>
+                        <div class="timer_item timer_seconds">
+                            <select id="tm_sec"></select>
+                            <span class="timer_ss">00</span>
+                        </div>
+                   </div>
+
+                   <div class="timer_buttons">
+                        <button class="timer_start" type="button">Start</button>
+                        <button class="timer_reset" type="button">Reset</button>
+                   </div>
+                </div>
+
+                <!-- Stopwatch -->
+                <div class="stopwatch">
+                    <div class="stopwatch_info">
+                        <span class="stopwatch_time sw_minute">00</span>
+                        <span class="sw_dots">:</span>
+                        <span class="stopwatch_time sw_seconds">00</span>
+                        <span class="sw_dots">:</span>
+                        <span class="stopwatch_time sw_milliseconds">00</span>
+                    </div>
+                    <div class="stopwatch_buttons">
+                        <button class="sw_btn sw_start">Start</button>
+                        <button class="sw_btn sw_stop">Stop</button>
+                        <button class="sw_btn sw_reset">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
